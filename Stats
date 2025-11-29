@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Stats {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int sum = 0;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+
+        for (int i = 1; i <= 5; i++) {
+            System.out.print(i + ". szám: ");
+            int num = scanner.nextInt();
+
+            sum += num;
+
+            if (num < min) min = num;
+            if (num > max) max = num;
+        }
+
+        double average = sum / 5.0;
+
+        System.out.println("Átlag: " + average);
+        System.out.println("Legkisebb: " + min);
+        System.out.println("Legnagyobb: " + max);
+    }
+}
